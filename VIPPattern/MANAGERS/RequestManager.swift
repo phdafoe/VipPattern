@@ -16,8 +16,8 @@ protocol RequestManagerProtocol: AnyObject {
 class RequestManager: RequestManagerProtocol {
     
     internal func requestGeneric<T: Decodable>(requestDto: RequestDTO, entityClass: T.Type) -> AnyPublisher<T, NetworkingError> {
-        
-        let endpoin = requestDto.endpoint
+        let baseurl = URLEndpoint.baseUrl
+        let endpoin = "\(baseurl)\(requestDto.endpoint)"
         let urlRequest = URLRequest(url: URL(string: endpoin)!)
         
         return URLSession

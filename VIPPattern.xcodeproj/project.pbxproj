@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		B42BBE66267B44BC00CC3A31 /* PosterCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B42BBE65267B44BC00CC3A31 /* PosterCardView.swift */; };
 		B46FF5AD267B467000A48B90 /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = B46FF5AC267B467000A48B90 /* movies.json */; };
-		B46FF5B0267B4F7700A48B90 /* PosterCardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46FF5AF267B4F7700A48B90 /* PosterCardPresenter.swift */; };
+		B4742A50267C8BD900AFE802 /* PosterCardGenericPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4742A4F267C8BD800AFE802 /* PosterCardGenericPresenter.swift */; };
+		B4742A53267C8FF800AFE802 /* CarrouselPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4742A52267C8FF800AFE802 /* CarrouselPostView.swift */; };
+		B4742A56267CA1A600AFE802 /* CarrouselVerticalTwoColumnsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4742A55267CA1A600AFE802 /* CarrouselVerticalTwoColumnsView.swift */; };
+		B4742A5A267CA57E00AFE802 /* WalkTroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4742A59267CA57E00AFE802 /* WalkTroughView.swift */; };
 		B4D0D5D0267897D200FABF29 /* VIPPatternApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D0D5CF267897D200FABF29 /* VIPPatternApp.swift */; };
 		B4D0D5D2267897D200FABF29 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D0D5D1267897D200FABF29 /* ContentView.swift */; };
 		B4D0D5D4267897DB00FABF29 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4D0D5D3267897DB00FABF29 /* Assets.xcassets */; };
@@ -30,7 +33,10 @@
 /* Begin PBXFileReference section */
 		B42BBE65267B44BC00CC3A31 /* PosterCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCardView.swift; sourceTree = "<group>"; };
 		B46FF5AC267B467000A48B90 /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
-		B46FF5AF267B4F7700A48B90 /* PosterCardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterCardPresenter.swift; sourceTree = "<group>"; };
+		B4742A4F267C8BD800AFE802 /* PosterCardGenericPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PosterCardGenericPresenter.swift; sourceTree = "<group>"; };
+		B4742A52267C8FF800AFE802 /* CarrouselPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrouselPostView.swift; sourceTree = "<group>"; };
+		B4742A55267CA1A600AFE802 /* CarrouselVerticalTwoColumnsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrouselVerticalTwoColumnsView.swift; sourceTree = "<group>"; };
+		B4742A59267CA57E00AFE802 /* WalkTroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkTroughView.swift; sourceTree = "<group>"; };
 		B4D0D5CC267897D100FABF29 /* VIPPattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPPattern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4D0D5CF267897D200FABF29 /* VIPPatternApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPPatternApp.swift; sourceTree = "<group>"; };
 		B4D0D5D1267897D200FABF29 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,7 +71,8 @@
 			isa = PBXGroup;
 			children = (
 				B42BBE65267B44BC00CC3A31 /* PosterCardView.swift */,
-				B46FF5AF267B4F7700A48B90 /* PosterCardPresenter.swift */,
+				B4742A52267C8FF800AFE802 /* CarrouselPostView.swift */,
+				B4742A55267CA1A600AFE802 /* CarrouselVerticalTwoColumnsView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -76,6 +83,14 @@
 				B46FF5AC267B467000A48B90 /* movies.json */,
 			);
 			path = SRC_MODELS;
+			sourceTree = "<group>";
+		};
+		B4742A58267CA55A00AFE802 /* WalkTrough */ = {
+			isa = PBXGroup;
+			children = (
+				B4742A59267CA57E00AFE802 /* WalkTroughView.swift */,
+			);
+			path = WalkTrough;
 			sourceTree = "<group>";
 		};
 		B4D0D5C3267897D100FABF29 = {
@@ -131,6 +146,7 @@
 		B4D0D5E526789B6B00FABF29 /* MODULES */ = {
 			isa = PBXGroup;
 			children = (
+				B4742A58267CA55A00AFE802 /* WalkTrough */,
 				B4D0D5E626789B8000FABF29 /* Movies */,
 			);
 			path = MODULES;
@@ -161,6 +177,7 @@
 		B4D0D5F82678A39800FABF29 /* MANAGERS */ = {
 			isa = PBXGroup;
 			children = (
+				B4742A4F267C8BD800AFE802 /* PosterCardGenericPresenter.swift */,
 				B4D0D5F92678A3CA00FABF29 /* RequestManager.swift */,
 				B4D0D6012678A5CD00FABF29 /* NetworkError.swift */,
 			);
@@ -256,17 +273,20 @@
 				B4D0D5E2267898C000FABF29 /* VIP.swift in Sources */,
 				B42BBE66267B44BC00CC3A31 /* PosterCardView.swift in Sources */,
 				B4D0D5EF26789BCE00FABF29 /* MoviesInteractor.swift in Sources */,
+				B4742A53267C8FF800AFE802 /* CarrouselPostView.swift in Sources */,
 				B4D0D5E826789BA600FABF29 /* MoviesView.swift in Sources */,
 				B4D0D5D2267897D200FABF29 /* ContentView.swift in Sources */,
 				B4D0D5D0267897D200FABF29 /* VIPPatternApp.swift in Sources */,
+				B4742A50267C8BD900AFE802 /* PosterCardGenericPresenter.swift in Sources */,
 				B4D0D5FE2678A4B000FABF29 /* Utils.swift in Sources */,
 				B4D0D5F62678A1FA00FABF29 /* MoviesServerModel.swift in Sources */,
 				B4D0D5FA2678A3CA00FABF29 /* RequestManager.swift in Sources */,
 				B4D0D5F226789E5400FABF29 /* MoviesCoordinator.swift in Sources */,
 				B4D0D6052678A8D200FABF29 /* MoviesProvider.swift in Sources */,
-				B46FF5B0267B4F7700A48B90 /* PosterCardPresenter.swift in Sources */,
 				B4D0D6022678A5CD00FABF29 /* NetworkError.swift in Sources */,
+				B4742A56267CA1A600AFE802 /* CarrouselVerticalTwoColumnsView.swift in Sources */,
 				B4D0D5EC26789BBD00FABF29 /* MoviesPresenter.swift in Sources */,
+				B4742A5A267CA57E00AFE802 /* WalkTroughView.swift in Sources */,
 				B4D0D6092678ACC500FABF29 /* ResultViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

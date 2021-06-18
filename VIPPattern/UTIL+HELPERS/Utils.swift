@@ -29,7 +29,9 @@ struct RequestDTO {
 
 struct URLEndpoint {
     static let baseUrl = "https://rss.itunes.apple.com/api/v1/es/"
-    static let endpointMovies = "movies/%@/%@/$@/explicit.json" //top-movies/all/25/explicit.json
+    static let endpointMovies = "movies/top-movies/all/25/explicit.json"
+    static let endpointMusic = "apple-music/coming-soon/all/10/explicit.json"
+    static let endpointPodcats = "podcasts/top-podcasts/all/25/explicit.json"
 }
 
 extension Bundle {
@@ -57,4 +59,8 @@ class Utils {
         dateFormatter.dateFormat = "yyyy-mm-dd"
         return dateFormatter
     }()
+}
+
+struct Constants {
+    static let totalPages = 3
 }

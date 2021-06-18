@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class PosterCardPresenter: ObservableObject {
+final class PosterCardGenericPresenter: ObservableObject {
     
     @Published var data = Data()
 

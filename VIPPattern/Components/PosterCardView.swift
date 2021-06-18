@@ -10,7 +10,7 @@ import SwiftUI
 struct PosterCardView: View {
     
     var model: ResultViewModel
-    @ObservedObject var urlDownloadImage = PosterCardPresenter()
+    @ObservedObject var urlDownloadImage = PosterCardGenericPresenter()
     
     init(model: ResultViewModel) {
         self.model = model
@@ -18,25 +18,25 @@ struct PosterCardView: View {
     }
     
     var body: some View {
-        ZStack(alignment: .bottomLeading) {
-            Image(uiImage: (self.urlDownloadImage.data.isEmpty ? UIImage(named: "placeholder") : UIImage(data: self.urlDownloadImage.data))!)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 180, height: 270)
-                .clipShape(RoundedRectangle(cornerRadius: 20))
-                .shadow(radius: 10)
-            Rectangle()
-                .fill(LinearGradient(gradient: Gradient(colors: [Color.black, Color.clear]), startPoint: .bottom, endPoint: .top))
-                .frame(width: 180, height: 270)
-                .clipShape(RoundedRectangle(cornerRadius: 20))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 20).stroke(Color.white, lineWidth: 4)
-                )
-            Text(model.name ?? "")
-                .padding()
-                .font(.callout)
-                .foregroundColor(.white)
+        VStack(alignment: .leading){
+            ZStack(alignment: .bottomLeading){
+                Image(uiImage: (self.urlDownloadImage.data.isEmpty ? UIImage(named: "placeholder") : UIImage(data: self.urlDownloadImage.data))!)
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    //.shadow(radius: 10)
+                Rectangle()
+                    .fill(LinearGradient(gradient: Gradient(colors: [Color.black, Color.clear]), startPoint: .bottom, endPoint: .top))
+                    .clipShape(RoundedRectangle(cornerRadius: 20))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 20).stroke(Color.white, lineWidth: 2)
+                    )
+                Text(model.name ?? "")
+                    .padding()
+                    .foregroundColor(.white)
+            }
         }
+        .lineLimit(2)
     }
 }
 

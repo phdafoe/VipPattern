@@ -13,10 +13,26 @@ struct MoviesView: View {
         
     var body: some View {
         List{
-            ForEach(self.presenter.arrayMovies) { item in
-                PosterCardView(model: item)
+            Group{
+                if !self.presenter.arrayMovies.isEmpty {
+                    CarrouselPostView(title: "Movies - show now ", model: self.presenter.arrayMovies)
+                }
+            }
+            Group{
+                if !self.presenter.arrayMusic.isEmpty {
+                    CarrouselVerticalTwoColumnsView(model: self.presenter.arrayMusic)
+                }
+            }
+            Group{
+                if !self.presenter.arrayPodcats.isEmpty {
+                    CarrouselPostView(title: "Podcats - show now", model: self.presenter.arrayPodcats)
+                }
             }
         }
+        .navigationTitle("Movies for iTunes")
+        .onAppear(perform: {
+            self.presenter.fetchDataFromPresente()
+        })
     }
 }
 
